@@ -1,0 +1,31 @@
+{
+  "name": "memory-game",
+  "version": "1.0.0",
+  "description": "Memory Game - Telegram Mini App",
+  "main": "game.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "memory-game",
+    "telegram",
+    "mini-app",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"],
+    "moduleFileExtensions": ["js"],
+    "testMatch": ["**/tests/**/*.test.js"],
+    "collectCoverageFrom": ["game.js"],
+    "verbose": true
+  }
+}
