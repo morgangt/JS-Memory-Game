@@ -50,6 +50,11 @@ global.Telegram = {
 global.createMockDOM = () => {
     document.body.innerHTML = `
         <div class="game-container" id="gameContainer">
+            <div class="difficulty-controls">
+                <button class="difficulty-btn active" data-difficulty="easy">EASY</button>
+                <button class="difficulty-btn" data-difficulty="normal">NORM</button>
+                <button class="difficulty-btn" data-difficulty="hard">HARD</button>
+            </div>
             <div class="game-board" id="gameBoard"></div>
             <span id="timer">30</span>
             <span id="moves">0</span>
@@ -59,8 +64,10 @@ global.createMockDOM = () => {
                     <div class="modal-icon" id="modalIcon"></div>
                     <h2 class="modal-title" id="modalTitle"></h2>
                     <p class="modal-subtitle" id="modalSubtitle"></p>
-                    <span id="finalTime"></span>
-                    <span id="finalMoves"></span>
+                    <div class="modal-stats" id="modalStats">
+                        <span id="finalTime"></span>
+                        <span id="finalMoves"></span>
+                    </div>
                     <div class="modal-record" id="modalRecord"></div>
                     <button id="modalBtn"></button>
                 </div>

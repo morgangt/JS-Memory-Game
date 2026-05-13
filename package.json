@@ -25,7 +25,7 @@
     "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"],
     "moduleFileExtensions": ["js"],
     "testMatch": ["**/tests/**/*.test.js"],
-    "collectCoverageFrom": ["game.js"],
+    "collectCoverageFrom": ["game.js", "gameUtils.js"],
     "verbose": true
   }
 }

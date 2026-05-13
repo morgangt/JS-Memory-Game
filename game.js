@@ -470,6 +470,11 @@ function initTelegramMiniApp() {
     }
 }
 
+// ===== State accessor for testing =====
+function getGameState() {
+    return gameState;
+}
+
 // ===== Start Game =====
 document.addEventListener('DOMContentLoaded', () => {
     initTelegramMiniApp();
@@ -488,3 +493,29 @@ document.addEventListener('touchend', (e) => {
     }
     lastTouchEnd = now;
 }, false);
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        getGameState,
+        initGame,
+        resetGameState,
+        setDifficulty,
+        handleCardClick,
+        flipCard,
+        unflipCard,
+        checkForMatch,
+        handleMatch,
+        handleMismatch,
+        startTimer,
+        stopTimer,
+        updateTimerDisplay,
+        handleWin,
+        handleLose,
+        showModal,
+        hideModal,
+        checkAndSaveRecord,
+        getRecord,
+        updateUI,
+        createConfetti,
+    };
+}
